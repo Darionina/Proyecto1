@@ -1,0 +1,403 @@
+/* Estilos Base */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #0D0D1A; /* Fondo oscuro por defecto */
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: hsl(268, 98%, 42%);
+    padding: 20px 8% ;
+    color: white;
+    height:  80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    
+    }
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 22px;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.navbar ul li a:hover
+{
+    color: #00b4fc;
+    transform: scale(1.1);
+}
+
+.menu-btn {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.menu-btn:hover {
+    transform: rotate(90deg); 
+}
+
+.logo 
+{
+    font-size: 26px;
+    font-weight: 800;
+
+}
+
+/* Esconder el checkbox y el botón de menú en PC */
+#click, .menu-btn {
+    display: none;
+    }
+/* Responsividad (Móvil) */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block; /* Mostrar icono de hamburguesa */
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+.navbar ul {
+    position: fixed;
+    top: 60px;
+    left: -100%; /* Escondido a la izquierda */
+    background: hsla(286, 97%, 47%, 0.718);
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+  /* Cuando el checkbox está marcado, mostramos el menú */
+#click:checked ~ ul {
+    left: 0;
+}
+
+.navbar ul li {
+    margin: 40px 0;
+}
+}
+
+
+.Inicio {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  height: 500px;
+  background-color: #0A0F2E;
+  overflow: hidden;
+  min-height: calc(85vh - 60px);
+  padding-left:  6%;
+ 
+}
+
+.Inicio-Contenido{
+  margin-top: 0px;
+  width: 650px;
+}
+
+.Inicio h1{
+  
+  font-weight: 800;
+  font-size: 70px;
+  color: white;
+  margin-top: 20px;
+}
+
+.Inicio strong , h2{
+  color: #7e56c9;
+  margin-top: 0;
+}
+
+.Inicio p{
+  margin-top: 18px;
+  font-size: 27px;
+  color: white;
+}
+
+.Imagen-Contenido{
+  margin-left: 90px;
+  position: relative;
+  display: block;
+  height: 100%;
+  
+}
+.Imagen-Contenido::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  
+  box-shadow: inset 150px 0px 120px -20px #0A0F2E;
+  
+  pointer-events: none; 
+}
+
+
+.Inicio img{
+  width: 100%;
+  min-height: 100%;
+  display: block;
+  object-fit: cover;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer */
+:root {
+  --footer-bg: #051a32;
+  --footer-accent: #6f00ff;
+  --footer-text: #94a3b8;
+  --footer-title: #ffffff;
+}
+
+.final-footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  width: 100%;
+  padding: 60px 0 20px 0;
+  margin-top: auto;
+  font-family: 'Inter', sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.footer-seccion, 
+.footer-col-explorar, 
+.footer-col-contacto {
+  flex: 1;
+  min-width: 280px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.final-footer h4 {
+  color: var(--footer-title);
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-top: auto;
+}
+
+.footer-seccion p {
+  line-height: 1.6;
+  font-size: 15px;
+  margin-bottom: 25px;
+  max-width: 320px;
+}
+
+.footer-titulo-mimarca {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--footer-title);
+  margin-bottom: 15px;
+}
+
+.footer-titulo-mimarca span {
+  color: var(--footer-accent);
+}
+
+.footer-sociales {
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+}
+
+.footer-sociales .social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-sociales .social-icon:hover {
+  background: var(--footer-accent);
+  transform: translateY(-5px);
+}
+
+.footer-col-explorar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col-explorar li {
+  margin-bottom: 12px;
+}
+
+.footer-col-explorar a {
+  color: var(--footer-text);
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.footer-col-explorar a:hover {
+  color: var(--footer-accent);
+  padding-left: 8px;
+}
+
+.footer-col-contacto p {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-col-contacto i {
+  color: var(--footer-accent);
+  margin-right: 15px;
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--footer-text);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-contenido {
+    text-align: center;
+  }
+  
+  .footer-col-contacto p {
+    justify-content: center;
+  }
+
+  .footer-sociales {
+    justify-content: center;
+  }
+
+  .footer-seccion, 
+  .footer-col-explorar, 
+  .footer-col-contacto {
+    min-width: 100%;
+  }
+}
